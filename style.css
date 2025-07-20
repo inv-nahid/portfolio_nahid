@@ -1,0 +1,759 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #000;
+  font-family: 'Press Start 2P', monospace;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fff;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4vw 0 4vw;
+  box-sizing: border-box;
+}
+.logo {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 2px solid #000;
+  padding: 0.5rem 1.5rem;
+  background: #fff;
+  box-shadow: 4px 4px 0 #000;
+}
+nav {
+  display: flex;
+  gap: 2rem;
+}
+nav a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  border-bottom: 2px dashed #000;
+  padding-bottom: 0.2rem;
+  transition: background 0.2s, color 0.2s;
+}
+nav a:hover {
+  background: #000;
+  color: #fff;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 3rem;
+  gap: 4vw;
+  min-height: 80vh; /* Make landing page taller */
+}
+.profile-pic {
+  width: 260px;
+  height: 260px;
+  background: #fff;
+  border: 4px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 8px 8px 0 #000;
+  font-size: 0.8rem;
+  overflow: hidden;
+}
+.ascii-art {
+  font-family: 'Press Start 2P', monospace;
+  white-space: pre;
+  line-height: 1.1;
+  color: #000;
+  user-select: none;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  max-width: 400px;
+}
+.greeting {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.name {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+.title {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+.btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.5rem;
+  border: 3px solid #000;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #000;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+.btn.filled {
+  background: #000;
+  color: #fff;
+}
+.btn:hover {
+  background: #000;
+  color: #fff;
+  box-shadow: none;
+}
+.btn.filled:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 4px 4px 0 #000;
+}
+.socials {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 2px solid #000;
+  background: #fff;
+  box-shadow: 2px 2px 0 #000;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.about-section {
+  width: 100vw;
+  background: #fff;
+  border-top: 4px solid #000;
+  padding: 4rem 0 4rem 0;
+  display: flex;
+  justify-content: center;
+}
+.about-container {
+  width: 90vw;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-title {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin-bottom: 2.5rem;
+  border-bottom: 3px double #000;
+  padding-bottom: 0.7rem;
+  text-align: center;
+  font-family: 'Press Start 2P', monospace;
+}
+.about-content {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: center;
+}
+.about-image {
+  min-width: 180px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.about-image .ascii-art {
+  font-size: 1.1rem;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  padding: 1.5rem 1.5rem 1.2rem 1.5rem;
+  background: #fff;
+}
+.about-text {
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.about-headline {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.about-intro {
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+.about-text p {
+  font-size: 0.85rem;
+  margin: 0 0 0.7rem 0;
+  line-height: 1.5;
+}
+/* --- Tech Stack Section --- */
+.tech-section {
+  width: 100vw;
+  background: #fff;
+  border-top: 4px solid #000;
+  padding: 4rem 0 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tech-title {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin-bottom: 2.5rem;
+  border-bottom: 3px double #000;
+  padding-bottom: 0.7rem;
+  text-align: center;
+  font-family: 'Press Start 2P', monospace;
+}
+.tech-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  width: 90vw;
+  max-width: 1200px;
+}
+.tech-box {
+  background: #fff;
+  border: 4px solid #000;
+  box-shadow: 8px 8px 0 #000;
+  border-radius: 0.5rem;
+  padding: 2rem 2.5rem;
+  min-width: 220px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Press Start 2P', monospace;
+  gap: 1.5rem;
+}
+.tech-box-title {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  border-bottom: 2px dashed #000;
+  padding-bottom: 0.5rem;
+  width: 100%;
+}
+.tech-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+.tech-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.2rem;
+ 
+  width: auto;
+  height: auto;
+}
+.tech-icon img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.projects-section {
+  width: 100vw;
+  background: #fff;
+  border-top: 4px solid #000;
+  padding: 4rem 0 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects-title {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin-bottom: 2.5rem;
+  border-bottom: 3px double #000;
+  padding-bottom: 0.7rem;
+  text-align: left;
+  font-family: 'Press Start 2P', monospace;
+  width: 90vw;
+  max-width: 1200px;
+}
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 90vw;
+  max-width: 1200px;
+}
+.project-card {
+  position: relative;
+  width: 100%;
+  min-height: 340px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 8px 8px 0 #000;
+  border: 4px solid #000;
+  background: #fff;
+  display: flex;
+  align-items: stretch;
+}
+.project-image {
+  flex: 1 1 60%;
+  background: #eee;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #bbb;
+}
+.project-glass {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  min-width: 340px;
+  max-width: 420px;
+  background: rgba(255,255,255,0.85);
+  border-right: 4px solid #000;
+  border-bottom: 4px solid #000;
+  border-radius: 0 0 18px 0;
+  box-shadow: 8px 8px 0 #000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 2;
+}
+.project-info {
+  padding: 2.2rem 2.2rem 2.2rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-family: 'Press Start 2P', monospace;
+  width: 100%;
+}
+.project-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.project-desc {
+  
+  font-size: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+.project-tech {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+  align-items: flex-end;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.project-tech .tech-icon {
+  margin-bottom: 0;
+}
+.project-links {
+  display: flex;
+  gap: 1.2rem;
+}
+.project-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 2px solid #000;
+  background: #fff;
+  box-shadow: 2px 2px 0 #000;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 8px;
+}
+
+.experience-section {
+  width: 100vw;
+  background: #fff;
+  border-top: 4px solid #000;
+  padding: 4rem 0 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.experience-title {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin-bottom: 2.5rem;
+  border-bottom: 3px double #000;
+  padding-bottom: 0.7rem;
+  text-align: left;
+  font-family: 'Press Start 2P', monospace;
+  width: 90vw;
+  max-width: 1200px;
+}
+.experience-list {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  width: 90vw;
+  max-width: 1200px;
+  justify-content: center;
+}
+.experience-card {
+  display: flex;
+  flex-direction: row;
+  background: #111;
+  color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 4px solid #000;
+  min-width: 340px;
+  max-width: 700px;
+  width: 100%;
+  min-height: 420px; /* Increased height for more text */
+}
+
+.experience-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2.8rem 2.8rem 2.8rem 2.8rem;
+  gap: 1.2rem;
+  font-family: 'Press Start 2P', monospace;
+  word-break: break-word;
+  font-size: 1rem;
+}
+.experience-label {
+  font-size: 0.8rem;
+  color: #bbb;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.experience-headline {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+.experience-desc {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+  color: #eee;
+  line-height: 1.7;
+}
+.experience-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #222;
+  border: 2px solid #fff;
+  box-shadow: 2px 2px 0 #000;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 0.5rem;
+}
+.experience-link:hover {
+  background: #fff;
+  color: #111;
+  border-color: #000;
+}
+.experience-link svg {
+  display: block;
+}
+.footer-section {
+  width: 100vw;
+  background: #fff;
+  border-top: 4px solid #000;
+  padding: 2.5rem 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Press Start 2P', monospace;
+  margin-top: 2rem;
+}
+.footer-contact {
+  margin-bottom: 1.2rem;
+}
+.footer-contact-link {
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  border: 2px solid #000;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 #000;
+  transition: background 0.2s, color 0.2s;
+}
+.footer-contact-link:hover {
+  background: #000;
+  color: #fff;
+}
+.footer-socials {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
+  border-radius: 0;
+  transition: background 0.2s, color 0.2s;
+  padding: 0;
+}
+.footer-social img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+.footer-social-label {
+  display: block;
+  font-size: 0.7rem;
+  color: #111;
+  font-family: 'Press Start 2P', monospace;
+  margin-top: 0.2rem;
+  text-align: center;
+}
+.footer-quote {
+  font-size: 0.8rem;
+  color: #222;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+.footer-quote-author {
+  font-size: 0.8rem;
+  color: #555;
+  font-style: italic;
+}
+.footer-credit {
+  font-size: 0.9rem;
+  color: #000;
+  margin-top: 0.7rem;
+  text-align: center;
+}
+.footer-love {
+  color: #e00;
+  font-size: 1.1em;
+  vertical-align: middle;
+  margin-left: 0.2em;
+}
+.about-portrait {
+  width: 260px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  background: #fff;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 1200px) {
+  .tech-boxes, .projects-list, .experience-list, .about-container {
+    width: 98vw;
+    max-width: 98vw;
+  }
+  .projects-title, .experience-title, .about-title, .footer-section {
+    width: 98vw;
+    max-width: 98vw;
+  }
+}
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2vw 0 2vw;
+  }
+  nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .logo {
+    font-size: 1.2rem;
+    padding: 0.3rem 1rem;
+  }
+  main {
+    flex-direction: column;
+    gap: 2rem;
+    min-height: 60vh;
+  }
+  .intro {
+    align-items: center;
+    text-align: center;
+  }
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .about-image {
+    min-width: 0;
+  }
+  .about-portrait {
+    width: 180px;
+    height: 260px;
+    margin-bottom: 1rem;
+  }
+  .tech-boxes, .projects-list, .experience-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 98vw;
+    max-width: 98vw;
+  }
+  .tech-box, .project-card, .experience-card {
+    min-width: 220px;
+    width: 98vw;
+    max-width: 98vw;
+    flex-direction: column;
+    min-height: 220px;
+    height: auto;
+  }
+  .project-image, .experience-image {
+    min-height: 120px;
+    width: 100%;
+  }
+  .project-info, .experience-info {
+    padding: 1.2rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 600px) {
+  .logo {
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+  }
+  nav a {
+    font-size: 0.7rem;
+    padding-bottom: 0.1rem;
+  }
+  .btn, .btn.filled, .footer-contact-link {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.7rem;
+    min-width: 90px;
+  }
+  .about-section, .tech-section, .projects-section, .experience-section, .footer-section {
+    padding: 1rem 0 1rem 0;
+  }
+  .about-title, .tech-title, .projects-title, .experience-title {
+    font-size: 0.8rem;
+    margin-bottom: 0.7rem;
+    padding-bottom: 0.2rem;
+  }
+  .about-image .ascii-art {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+  }
+  .about-text, .project-info, .experience-info {
+    max-width: 100%;
+    font-size: 0.7rem;
+    padding: 0.7rem 0.5rem;
+  }
+  .about-headline, .project-name, .experience-headline {
+    font-size: 0.7rem;
+  }
+  .about-intro, .project-desc, .experience-desc {
+    font-size: 0.6rem;
+  }
+  .tech-label, .footer-social-label {
+    font-size: 0.5rem;
+  }
+  .footer-section {
+    padding: 0.7rem 0 0.7rem 0;
+  }
+  .footer-contact-link {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+  }
+  .footer-socials {
+    gap: 0.5rem;
+  }
+  .footer-social img {
+    width: 16px;
+    height: 16px;
+  }
+  .about-portrait {
+    width: 120px;
+    height: 180px;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 400px) {
+  .logo {
+    font-size: 0.7rem;
+  }
+  nav a {
+    font-size: 0.5rem;
+  }
+  .btn, .btn.filled, .footer-contact-link {
+    font-size: 0.5rem;
+    padding: 0.2rem 0.3rem;
+    min-width: 60px;
+  }
+  .about-title, .tech-title, .projects-title, .experience-title {
+    font-size: 0.6rem;
+  }
+} 
